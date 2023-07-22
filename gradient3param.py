@@ -4,18 +4,14 @@ import matplotlib.pyplot as plt
 
 
 def dEda(y, a, b, c):
-    x = np.linspace(*linspace)
-    v = -2 * np.sum((y - a * x ** 2 - b * x - c) * x ** 2)
     return -2 * np.sum((y - a * x ** 2 - b * x - c) * x ** 2)
 
 
 def dEdb(y, a, b, c):
-    x = np.linspace(*linspace)
     return -2 * np.sum((y - a * x ** 2 - b * x - c) * x)
 
 
 def dEdc(y, a, b, c):
-    x = np.linspace(*linspace)
     return -2 * np.sum((y - a * x ** 2 - b * x - c) * 1)
 
 
