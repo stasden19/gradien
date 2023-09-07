@@ -1,12 +1,14 @@
 import numpy as np
 F = np.array([
-    [1, 2, 6],
-    [5, 7, 24],
-    [5, 6, 22],
-    [5, 4, 18],
+    [1, 3, 2],
+    [5, 15, 10],
+    [5, 15, 10],
+    [5, 15, 10],
 
 ]).T
 GB = 1 / F.shape[0] * F @ F.T
 L, W = np.linalg.eig(GB)
-print(L)
-print((W.T @ F).T)
+a = (W.T @ F).T
+a = np.round(a, 2)
+a[a != 0] = 1
+print(a * F.T)
