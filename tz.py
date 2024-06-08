@@ -43,4 +43,7 @@ n = int(input('Количество наборов: '))
 for i in range(n):
     a, b = input().split()
     line = input('line: ')
+    if len(line) != a:
+        print('Длина не совпадает')
+        exit(1)
     print(min_replacements(int(a), int(b), line, 0))
