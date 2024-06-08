@@ -29,6 +29,8 @@ def min_replacements(a, b, seq, answer):
         return a - Counter(seq)['W']
     elif max_seq(seq) >= b:
         return answer
+    elif 'W' not in seq:
+        return b
     else:
         # all_w = [i for i, j in enumerate(seq) if j == 'W']
         all_w = sorted(find_w_distances(seq), key=lambda x: x[0])
