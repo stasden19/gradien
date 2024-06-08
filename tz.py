@@ -5,7 +5,8 @@ def find_w_distances(seq):
     w_indices = [i for i, c in enumerate(seq) if c == 'W']
     distances = []
     for i in range(len(w_indices) - 1):
-        distances.append((w_indices[i + 1] - w_indices[i], w_indices[i]))
+        if w_indices[i + 1] - w_indices[i] > 1:
+            distances.append((w_indices[i + 1] - w_indices[i], w_indices[i]))
     return distances
 
 
